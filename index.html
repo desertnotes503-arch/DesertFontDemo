@@ -14,12 +14,12 @@
             min-height: 100vh;
             margin: 0;
             padding: 60px 20px;
-            background: #e0e0e0; /* 灰色調背景 */
+            background: #dcdcdc; /* 灰色調背景 */
             position: relative;
             overflow: hidden;
         }
 
-        /* 現代風格淡線條 */
+        /* 現代風格淡線條 + 微斜線 */
         body::before {
             content: "";
             position: absolute;
@@ -27,10 +27,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px),
-                              linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 40px 40px; /* 線條間距 */
-            pointer-events: none; /* 不影響互動 */
+            background-image: 
+                linear-gradient(90deg, rgba(255,255,255,0.2) 2px, transparent 2px),
+                linear-gradient(rgba(255,255,255,0.2) 2px, transparent 2px),
+                linear-gradient(45deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 40px 40px, 40px 40px, 80px 80px;
+            pointer-events: none;
         }
 
         h1 {
@@ -76,3 +78,4 @@
     <textarea placeholder="輸入文字..."></textarea>
 </body>
 </html>
+
